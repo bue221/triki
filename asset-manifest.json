@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/triki/static/css/main.ddd6cc72.chunk.css",
+    "main.js": "/triki/static/js/main.452efb5f.chunk.js",
+    "main.js.map": "/triki/static/js/main.452efb5f.chunk.js.map",
+    "runtime-main.js": "/triki/static/js/runtime-main.65bd5159.js",
+    "runtime-main.js.map": "/triki/static/js/runtime-main.65bd5159.js.map",
+    "static/js/2.bfc6c8aa.chunk.js": "/triki/static/js/2.bfc6c8aa.chunk.js",
+    "static/js/2.bfc6c8aa.chunk.js.map": "/triki/static/js/2.bfc6c8aa.chunk.js.map",
+    "index.html": "/triki/index.html",
+    "precache-manifest.22bbc45a46ee825190c607015848e0d9.js": "/triki/precache-manifest.22bbc45a46ee825190c607015848e0d9.js",
+    "service-worker.js": "/triki/service-worker.js",
+    "static/css/main.ddd6cc72.chunk.css.map": "/triki/static/css/main.ddd6cc72.chunk.css.map",
+    "static/js/2.bfc6c8aa.chunk.js.LICENSE.txt": "/triki/static/js/2.bfc6c8aa.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.65bd5159.js",
+    "static/js/2.bfc6c8aa.chunk.js",
+    "static/css/main.ddd6cc72.chunk.css",
+    "static/js/main.452efb5f.chunk.js"
+  ]
+}
