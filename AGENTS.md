@@ -12,7 +12,7 @@ Visual system: [docs/design.md](docs/design.md). Follow that file for color, typ
 
 ## Stack
 
-Vite 7 + React 18, CSS custom properties. No CRA/`react-scripts` (that toolchain is unmaintained and is where the audit findings lived). No router, no state library, no Tailwind. Use `package-lock.json` as the lockfile.
+Vite 7 + React 18, CSS custom properties. GitHub Pages is `https://bue221.github.io/triki/` via `.github/workflows/pages.yml` (build with `GITHUB_PAGES=true`, publish `dist` to `gh-pages`). No CRA/`react-scripts`. No router, no state library, no Tailwind. Use `package-lock.json` as the lockfile.
 
 ## Architecture
 

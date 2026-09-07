@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Game from "./Game";
 import Doodles from "./Doodles";
-import { goToLearn, navigate } from "../navigation";
+import { goToLearn, navigate, withBase } from "../navigation";
 
 function PlayPage() {
   const [gameKey, setGameKey] = useState(0);
@@ -18,7 +18,7 @@ function PlayPage() {
       <header className="topbar play-topbar">
         <a
           className="wordmark"
-          href="/"
+          href={withBase("/")}
           onClick={(event) => {
             event.preventDefault();
             navigate("/");
@@ -29,7 +29,7 @@ function PlayPage() {
         <nav className="topbar-nav" aria-label="Partida">
           <a
             className="nav-link"
-            href="/#aprender"
+            href={withBase("/#aprender")}
             onClick={(event) => {
               event.preventDefault();
               goToLearn();

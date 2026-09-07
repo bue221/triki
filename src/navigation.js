@@ -1,5 +1,26 @@
+export function getBase() {
+  const base = import.meta.env.BASE_URL || "/";
+  return base.endsWith("/") ? base : `${base}/`;
+}
+
+export function withBase(path) {
+  const base = getBase();
+  if (!path || path === "/") {
+    return base;
+  }
+  if (path.startsWith("/#")) {
+    return `${base}${path.slice(1)}`;
+  }
+  return `${base}${path.replace(/^\//, "")}`;
+}
+
 export function getPath() {
-  return window.location.pathname.replace(/\/$/, "") || "/";
+  const base = getBase().replace(/\/$/, "");
+  let path = window.location.pathname;
+  if (base && path.startsWith(base)) {
+    path = path.slice(base.length) || "/";
+  }
+  return path.replace(/\/$/, "") || "/";
 }
 
 export function navigate(path) {
@@ -8,7 +29,7 @@ export function navigate(path) {
     return;
   }
 
-  window.history.pushState({}, "", next);
+  window.history.pushState({}, "", withBase(next));
   window.dispatchEvent(new PopStateEvent("popstate"));
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Game from "./Game";
 import Doodles from "./Doodles";
 import LearnSection from "./LearnSection";
-import { navigate } from "../navigation";
+import { navigate, withBase } from "../navigation";
 
 function FeatureIcon({ children }) {
   return (
@@ -33,7 +33,7 @@ function Landing() {
         <nav className="topbar-nav" aria-label="Principal">
           <a
             className="nav-link"
-            href="/animation"
+            href={withBase("/animation")}
             onClick={(event) => {
               event.preventDefault();
               navigate("/animation");
@@ -62,7 +62,7 @@ function Landing() {
             Un tablero en blanco, marcas a mano y un historial para volver atrás.
             Sin cuentas. Sin ruido. Solo X y O.
           </p>
-          <a className="btn btn-primary" href="/animation" onClick={openPlayView}>
+          <a className="btn btn-primary" href={withBase("/animation")} onClick={openPlayView}>
             Jugar ahora
             <span className="btn-arrow" aria-hidden="true">
               →
@@ -154,7 +154,7 @@ function Landing() {
           Triki · tres en raya local.{" "}
           <a
             className="inline-link"
-            href="/animation"
+            href={withBase("/animation")}
             onClick={(event) => {
               event.preventDefault();
               navigate("/animation");
